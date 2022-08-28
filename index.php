@@ -29,7 +29,7 @@ $artigos = $artigo->exibirTodos();
             <?php echo nl2br ($artigo['conteudo']); ?>
         </p>
         <?php endforeach; ?>
-        <a class="botao botao-block" href="admin/index.php">login administrativo</a>
+        <a class="botao botao-block" href="src/login.php">login administrativo</a>
     </div>
     
 </body>

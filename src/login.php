@@ -28,7 +28,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
             $_SESSION['id'] = $usuario['id'];
 
-            header("Location: administrador.php");
+            header("Location: \blog\admin\administrador.php");
 
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";
@@ -41,9 +41,10 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <title>Meu Blog</title>
+
+    <title>LOGIN</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
     <div id="container">

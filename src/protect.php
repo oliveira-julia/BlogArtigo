@@ -5,7 +5,7 @@ if(!isset($_SESSION)) {
 }
 
 if(!isset($_SESSION['id'])) {
-    die("Você não pode acessar esta página porque não está logado.<p><a href=\"\blog\admin\index.php\">Entrar</a></p>");
+    die("Você não pode acessar esta página porque não está logado.<p><a href=\"\login.php\">Entrar</a></p>");
 }
 
 
@@ -17,7 +17,6 @@ if(!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACESSO NEGADO!</title>
 </head>
 <body>   
 </body>
