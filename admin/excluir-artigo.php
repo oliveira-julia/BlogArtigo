@@ -1,6 +1,8 @@
 <?php 
 require '../config.php';
 include '../src/Artigo.php';
+include "../src/protect.php"; 
+
 if ($_SERVER['REQUEST_METHOD']=== "POST"){
     $artigo = new Artigo($mysql);
     $artigo->remover($_POST['id']);

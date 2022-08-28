@@ -1,3 +1,6 @@
+<?php 
+include "../src/protect.php"; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

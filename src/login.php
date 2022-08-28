@@ -13,22 +13,17 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $email = $mysql->real_escape_string($_POST['email']);
         $senha = $mysql->real_escape_string($_POST['senha']);
 
-        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql_code = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
         $sql_query = $mysql->query($sql_code) or die("Falha na execução do código SQL: " . $mysql->error);
 
-        $quantidade = $sql_query->num_rows;
+        $usuario =  $sql_query->fetch_assoc();
 
-        if($quantidade == 1) {
+        if(password_verify($senha, $usuario['senha'])) {
             
-            $usuario = $sql_query->fetch_assoc();
-
-            if(!isset($_SESSION)) {
-                session_start();
-            }
-
+            session_start();
             $_SESSION['id'] = $usuario['id'];
 
-            header("Location: \blog\admin\administrador.php");
+            header("Location: ..\admin\administrador.php");
 
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";
@@ -41,9 +36,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>LOGIN</title>
-    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Meu Blog</title>
+    <meta charset="UTF-8">
 </head>
 <body>
     <div id="container">

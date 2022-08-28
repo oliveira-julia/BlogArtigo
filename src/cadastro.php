@@ -2,7 +2,8 @@
 include "..\config.php";
 
 $nome = $_POST['nome'];
-$senha = password_hash($_POST['senha'], PASSWORD_ARGON2I);
+$senha = $_POST["senha"];
+$senhaCripto = password_hash($_POST['senha'], PASSWORD_ARGON2ID);
 $email  = $_POST['email'];
 
 $SELECT = "SELECT email From usuarios Where email = ?";
@@ -18,7 +19,7 @@ $INSERT = "INSERT Into usuarios (nome , email ,senha)values(?,?,?)";
       if ($rnum==0) {
       $stmt->close();
       $stmt = $mysql->prepare($INSERT);
-      $stmt->bind_param("sss", $nome,$email,$senha);
+      $stmt->bind_param("sss", $nome,$email,$senhaCripto);
       $stmt->execute();
       echo "Registrado com sucesso";
      } else {
