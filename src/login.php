@@ -41,7 +41,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title>LOGIN</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../style.css">

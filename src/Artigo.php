@@ -1,5 +1,4 @@
 <?php
-
 class Artigo
 {
     private $mysql;

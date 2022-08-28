@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
-
 <body>
 
 <form method="POST" action="..\src\cadastro.php">

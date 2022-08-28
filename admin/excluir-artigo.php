@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD']=== "POST"){
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta charset="UTF-8">

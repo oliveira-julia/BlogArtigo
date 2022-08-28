@@ -8,7 +8,6 @@ $email  = $_POST['email'];
 $SELECT = "SELECT email From usuarios Where email = ?";
 $INSERT = "INSERT Into usuarios (nome , email ,senha)values(?,?,?)";
 
-//Prepare statement
      $stmt = $mysql->prepare($SELECT);
      $stmt->bind_param("s", $email);
      $stmt->execute();
@@ -16,7 +15,6 @@ $INSERT = "INSERT Into usuarios (nome , email ,senha)values(?,?,?)";
      $stmt->store_result();
      $rnum = $stmt->num_rows;
 
-     //checking username
       if ($rnum==0) {
       $stmt->close();
       $stmt = $mysql->prepare($INSERT);

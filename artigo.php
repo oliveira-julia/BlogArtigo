@@ -5,11 +5,10 @@ require 'src/Artigo.php';
 
 $obj_artigo = new Artigo($mysql);
 $artigo = $obj_artigo->encontrarPorId($_GET['id']);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
+    
 <head>
     <title>Meu Blog</title>
     <meta charset="UTF-8">

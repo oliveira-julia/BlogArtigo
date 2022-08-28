@@ -20,7 +20,6 @@ $art = $artigo->encontrarPorId($_GET["id"]);
     <meta charset="UTF-8">
     <title>Editar Artigo</title>
 </head>
-
 <body>
     <div id="container">
         <h1>Editar Artigo</h1>

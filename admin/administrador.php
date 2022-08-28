@@ -4,7 +4,6 @@
 require "../config.php";
 include "../src/Artigo.php";
 include "../src/protect.php";
-
 $artigo = new Artigo($mysql);
 $artigo = $artigo->exibirTodos();
 ?>
@@ -28,7 +27,11 @@ $artigo = $artigo->exibirTodos();
             </div>
             <?php } ?>
             <nav>
-                <a class="botao botao-block" href="adicionar-artigo.php">Adicionar Artigo</a><a class="botao botao-block" href="..\src\logout.php">Encerrar sessão</a><a class="botao botao-block" href="cadastroAdmin.php">Cadastrar outro usuario</a>
+                <a class="botao botao-block" href="adicionar-artigo.php">Adicionar Artigo</a>
+                <br>
+                <a class="botao botao-block" href="..\src\logout.php">Encerrar sessão</a>
+                <br>
+                <a class="botao botao-block" href="cadastroAdmin.php">Cadastrar outro usuario</a>
             </nav>
     </div>
 </body>

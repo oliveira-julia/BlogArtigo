@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Adicionar Artigo</title>
 </head>
-
 <body>
     <div id="container">
         <h1>Adicionar Artigo</h1>
